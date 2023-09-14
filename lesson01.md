@@ -171,7 +171,7 @@ How many people are going to the cinema in total? Enter it to JavaScript Console
 A ticket to watch the movie costs 8€, let JavaScript compute how much we have to pay in total.
 <!-- .element: class="fragment" -->
 
-Harald and Woytek volunteered to pay for the tickets. Use JavaScript to compute how much each has to pay.
+Abdullah and Owen volunteered to pay for the tickets. Use JavaScript to compute how much each has to pay.
 <!-- .element: class="fragment" -->
 
 ---
@@ -184,6 +184,8 @@ A data type is defined by two things:
 1. A set of operators
 
 The operators are used on the values.
+
+---
 
 `2` and `3` are example *values* for the `Number` data type. `+` is an *operator* that we can use to perform an addition on `2` and `3`.
 
