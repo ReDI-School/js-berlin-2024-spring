@@ -2,7 +2,7 @@
 
 # Basic Frontend - Spring 2023
 
-Lesson 2, Tuesday, 2023-09-20
+Lesson 2, Tuesday, 2023-09-19
 
 ---
 
@@ -422,5 +422,5 @@ Create a new variable that contains how much we have to pay in total.
 <!-- .element: class="fragment" -->
 
 
-Harald and Woytek volunteered to pay for the tickets. Use JavaScript to compute how much each has to pay.
+Harald and Abdo volunteered to pay for the tickets. Use JavaScript to compute how much each has to pay.
 <!-- .element: class="fragment" -->
