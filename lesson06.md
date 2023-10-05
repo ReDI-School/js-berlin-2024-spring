@@ -224,7 +224,7 @@ function sayHiToSevtap() {
 
 sayHiToOwen();
 sayHiToMellina();
-sayHiToHarald();
+sayHiToSevtap();
 ```
 
 ---
@@ -248,11 +248,11 @@ function sayHi(name) {
 
 sayHi('Owen');
 sayHi('Mellina');
-sayHi('Harald');
+sayHi('Sevtap');
 ```
 
 - `name` is a function **parameter**
-- "Owen", "Mellina", "Harald" are **arguments**. In each function call they will be assigned to the `name` parameter
+- "Owen", "Mellina", "Sevtap" are **arguments**. In each function call they will be assigned to the `name` parameter
 
 ---
 
