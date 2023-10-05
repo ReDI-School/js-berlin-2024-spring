@@ -418,4 +418,4 @@ to fix the examples so that they run correctly.
 
 ### Bonus Bonus Tasks
 
-Want to practice more? Try solving the tasks in [index.html](https://github.com/ReDI-School/js-berlin-2023-spring/tree/main/functions)
+Want to practice more? Try solving the tasks in [index.html](https://github.com/ReDI-School/js-berlin-2023-fall/tree/main/functions)
