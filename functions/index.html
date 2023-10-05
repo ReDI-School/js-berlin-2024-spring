@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+  <title>Function Exercises</title>
+</head>
+
+<body>
+  <script>
+    /*
+    Finish the following functions. Use only what we learned in class.
+
+    Don't hesitate to ask for help :)
+    */
+
+    /*
+    The functions has 3 parameters: a, b, c. All parameters are numbers.
+    Return the smallest of the 3 parameters.
+
+    Example 1: min(5, 10, 1) returns 1
+    Example 2: min(-5, 10, 1) returns -5
+    */
+    function min(a, b, c) {
+      // your code here
+    }
+
+    /*
+    Let's go to cinema! A ticket costs 5 EUR. 
+    
+    Your function takes two parameters:
+    - budget, the amount of money you have.
+    - friends, the number of friend that are going in total (including you).
+    
+    Return true if the budget is enough to buy tickets for all friends, otherwise false.
+    */
+    function canGoToCinema(budget, friends) {
+      // your code here
+    }
+
+    /*
+    A pizza place charges extra for toppings depending on the number of toppings.
+    The charges are as follows:
+    - 0 toppings are free (0 EUR)
+    - 1 topping costs 1 EUR
+    - 2 toppings costs 2 EUR
+    - 3 toppings cost 3 EUR
+    - 4 toppings cost 10 EUR (because of the emotional damage to the cook)
+
+    You're a developer who has to write a function that calculates the cost of the
+    pizza toppings. The waiter provides you with 4 boolean parameters that are all either
+    true or false.
+
+    Return the cost of the toppings for that pizza.
+    */
+    function toppingCost(mushrooms, pepperoni, olives, pineapple) {
+      // your code here
+    }
+
+    /*
+    Congrats, you're done :) Don't touch the code below!
+    */
+  </script>
+
+  <div id="mocha"></div>
+  <script src="https://unpkg.com/chai/chai.js"></script>
+  <script src="https://unpkg.com/mocha/mocha.js"></script>
+  <script>
+    mocha.setup("bdd");
+
+    const expect = chai.expect;
+
+    describe("Min", function () {
+      it("Min of positive numbers", function () {
+        expect(min(50, 102, 42)).to.equal(42);
+        expect(min(50, 41, 102)).to.equal(41);
+        expect(min(40, 42, 102)).to.equal(40);
+      });
+      it("Min of positive and negative numbers", function () {
+        expect(min(-1, -2, -3)).to.equal(-3);
+        expect(min(-1, -2, 3)).to.equal(-2);
+        expect(min(-3, -2, 3)).to.equal(-3);
+      });
+      it("Identical numbers", function () {
+        expect(min(1, 1, 1)).to.equal(1);
+        expect(min(2, 1, 1)).to.equal(1);
+        expect(min(1, 2, 1)).to.equal(1);
+        expect(min(1, 1, 2)).to.equal(1);
+        expect(min(2, 3, 3)).to.equal(2);
+        expect(min(3, 2, 3)).to.equal(2);
+        expect(min(3, 3, 2)).to.equal(2);
+      });
+    });
+
+    describe("Cinema", function () {
+      it("0 EUR, 1 friend", function () {
+        expect(canGoToCinema(0, 1)).to.equal(false);
+      });
+      it("4 EUR, 1 friend", function () {
+        expect(canGoToCinema(4, 1)).to.equal(false);
+      });
+      it("5 EUR, 1 friend", function () {
+        expect(canGoToCinema(5, 1)).to.equal(true);
+      });
+      it("9 EUR, 2 friends", function () {
+        expect(canGoToCinema(9, 2)).to.equal(false);
+      });
+      it("10 EUR, 2 friends", function () {
+        expect(canGoToCinema(10, 2)).to.equal(true);
+      });
+      it("11 EUR, 2 friends", function () {
+        expect(canGoToCinema(11, 2)).to.equal(true);
+      });
+    });
+
+    describe("Pizza", function () {
+      it("0 toppings", function () {
+        expect(toppingCost(false, false, false, false)).to.equal(0);
+      });
+      it("1 topping", function () {
+        expect(toppingCost(true, false, false, false)).to.equal(1);
+        expect(toppingCost(false, true, false, false)).to.equal(1);
+        expect(toppingCost(false, false, true, false)).to.equal(1);
+        expect(toppingCost(false, false, false, true)).to.equal(1);
+      });
+      it("2 toppings", function () {
+        expect(toppingCost(true, true, false, false)).to.equal(2);
+        expect(toppingCost(true, false, true, false)).to.equal(2);
+        expect(toppingCost(true, false, false, true)).to.equal(2);
+        expect(toppingCost(false, true, true, false)).to.equal(2);
+        expect(toppingCost(false, true, false, true)).to.equal(2);
+        expect(toppingCost(false, false, true, true)).to.equal(2);
+      });
+      it("3 toppings", function () {
+        expect(toppingCost(false, true, true, true)).to.equal(3);
+        expect(toppingCost(true, false, true, true)).to.equal(3);
+        expect(toppingCost(true, true, false, true)).to.equal(3);
+        expect(toppingCost(true, true, true, false)).to.equal(3);
+      });
+      it("4 toppings", function () {
+        expect(toppingCost(true, true, true, true)).to.equal(10);
+      });
+    });
+
+    mocha.run();
+  </script>
+</body>
+
+</html>
