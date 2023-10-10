@@ -158,8 +158,8 @@ HTML:
 
 ```html
 <button onclick="setColor('red')">red</button>
-<button onclick="setColor('green')">red</button>
-<button onclick="setColor('blue')">red</button>
+<button onclick="setColor('green')">green</button>
+<button onclick="setColor('blue')">blue</button>
 ```
 
 JavaScript:
