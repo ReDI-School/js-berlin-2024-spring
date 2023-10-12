@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="play('rock')">Rock</button>
+    <button onclick="play('paper')">Paper</button>
+    <button onclick="play('scissors')">Scissors</button>
+
+    <script>
+        // copy/pasted from the slides. Returns a random move
+        function randomMove() {
+            let randomNumber = Math.random();
+            if (randomNumber < 0.33) {
+                return "rock";
+            } else if (randomNumber < 0.66) {
+                return "paper";
+            } else {
+                return "scissors";
+            }
+        }
+
+        // returns the winning move for a given move
+        function getWinningMove(move) {
+            if (move === "rock") {
+                return "paper";
+            } else if (move === "paper") {
+                return "scissors";
+            } else {
+                return "rock";
+            }
+        }
+
+        // returns the color for a given game
+        function getColor(move, computerMove) {
+            let winningMove = getWinningMove(computerMove);
+            console.log("your move", move, "computer move", computerMove);
+            if (move === computerMove) {
+                // both the player and the computer chose the same move
+                // it's a tie.
+                return "yellow";
+            } else if (move === winningMove) {
+                // the player chose the winning move. Player won.
+                return "green";
+            } else {
+                // we handled ties and wins. The only thing left is a loss.
+                return "red";
+            }
+        }
+
+        function play(move) {
+            let computerMove = randomMove();
+            let color = getColor(move, computerMove);
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+
+</body>
+
+</html>
