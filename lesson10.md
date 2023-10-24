@@ -448,39 +448,3 @@ me.introduce();
 console.log(me.address.city); // "Berlin"
 console.log(me.address.country); // "Germany"
 ```
-
----
-
-### Variable lifetime
-
-```js
-console.log(x); // 1
-function myFunction() {
-    console.log(x); // 2
-    let x = 42;
-    console.log(x); // 3
-}
-console.log(x); // 4
-```
-
-Which of the `console.log` above are valid?
-
-Only 3. 1, 2, and 4 throw errors.
-<!-- .element: class="fragment" -->
-
----
-
-### Variable lifetime
-
-When you open a scope with `{`, e.g. for `if` statements or `function`, the variables you define inside the curly braces only exist within that block.
-
-Variables you define outside any curly braces exist during the entire lifetime of your html page:
-
-```js
-// I exist as long as the html page exists!
-let clickCount = 0;
-
-function onButtonClick() {
-    clickCount += 1;
-}
-```
