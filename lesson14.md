@@ -244,7 +244,7 @@ async function main() {
 1. Download the data from https://restcountries.com/v3.1/name/deutschland (or any country you like) in JavaScript and log the response to console
 1. Create a web page that displays the country's official name, its area and its population
 1. Bonus: Show the capital cities
-1. Bonus: Display the flag and the coat or arms of the country as SVG file. (Hint: use `img` element and set the `src` attribute).
+1. Bonus: Display the flag and the coat of arms of the country as SVG file. (Hint: use `img` element and set the `src` attribute).
 
 <!-- .slide: style="font-size:80%" -->
 
