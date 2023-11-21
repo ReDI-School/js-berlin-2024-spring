@@ -193,7 +193,7 @@ let temperatures = [
 
 ### Task 2
 
-Create a new graph of the forcast of the new hourly temperature in Berlin for the next 3 days.
+Create a new graph of the forecast of the new hourly temperature in Berlin for the next 3 days.
 
 you can fetch the data by using the following URL
 

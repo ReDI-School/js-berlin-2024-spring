@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+"use strict";
+
 // This little script can be used to create a new skeleton lesson
 
 const fs = require('fs');
@@ -32,7 +34,7 @@ const template =
 
 # Basic Frontend - Fall 2023
 
-Lesson ${nextLesson}, ${nextDate.getDay() == 2 ? "Tuesday" : "Thursday"}, ${nextDate.getFullYear()}-${(nextDate.getMonth() + 1).toString().padStart(2, '0')}-${nextDate.getDate().toString().padStart(2, '0')}
+Lesson ${nextLesson}, ${nextDate.getDay() === 2 ? "Tuesday" : "Thursday"}, ${nextDate.getFullYear()}-${(nextDate.getMonth() + 1).toString().padStart(2, '0')}-${nextDate.getDate().toString().padStart(2, '0')}
 
 ---
 `;
