@@ -84,6 +84,9 @@ https://docs.joinmastodon.org/client/public/
 
 Can you show the published posts and author?
 
+Note that there are many different Mastodon instances to choose from, and they might have different API restrictions.
+One of the larger ones is "https://mastodon.social", and its API can be accessed without any API keys or registration.
+
 ---
 
 ## Sources
