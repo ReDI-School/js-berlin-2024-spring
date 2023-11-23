@@ -22,9 +22,11 @@ Lesson 17, Thursday, 2023-11-23
 
 ### More ideas
 
-* Data visualization of the flow markets in Berlin
+* Data visualization of the flee markets in Berlin
 * Personal Portfolio
 * Calendar for Remote work
+* Grocery shopping list
+* Learn German with ChatGPT
 
 ---
 
@@ -33,6 +35,4 @@ Lesson 17, Thursday, 2023-11-23
 Define a Minimum Viable Product (MVP)
 
 Implement essential functionality, and if there's still time, implement the "nice to have" features.
-
----
 
