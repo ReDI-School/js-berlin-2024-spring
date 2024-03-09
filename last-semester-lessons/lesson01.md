@@ -1,8 +1,8 @@
 <!-- .slide: id="lesson1" -->
 
-# Basic Frontend - Sprint 2024
+# Basic Frontend - Fall 2023
 
-Lesson 1, Thursday, 2024-03-14
+Lesson 1, Thursday, 2023-09-14
 
 ---
 
@@ -22,6 +22,8 @@ Lesson 1, Thursday, 2024-03-14
 >
 > \- ~Noam Chomsky~ Victor Weisskopf
 
+(recently learned that the quote is by Victor Weisskopf, a famous physicist, but it's often attributed to Chomsky because he mentioned in some interviews. Still a good quote.)
+<!-- .element: class="fragment" data-fragment-index="2" -->
 
 ---
 
@@ -29,8 +31,8 @@ Lesson 1, Thursday, 2024-03-14
 
 - don't be shy (or scared), ask questions!
   - as many as possible
-  - there are no bad questions
 - interrupt us
+- there are no bad questions
 - ask us to repeat
 - if something is not clear to you, it's likely that it's not clear for others
 
@@ -38,11 +40,11 @@ Lesson 1, Thursday, 2024-03-14
 
 ### Pillars of Web Development
 
-| HTML                                                                         | CSS                                                                   | JavaScript                                                                     |
-| ---------------------------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| HTML | CSS | JavaScript |
+| ---- | --- | ---------- |
 | ![HTML5](images/HTML5_Logo.svg) <!-- .element height="64px" width="64px" --> | ![CSS3](images/css3.svg) <!-- .element height="64px" width="64px" --> | ![JS](images/javascript-logo.svg) <!-- .element height="64px" width="64px" --> |
-| *Content*                                                                    | *Presentation*                                                        | *Dynamic Effects*                                                              |
-| Nouns                                                                        | Adjectives                                                            | Verbs                                                                          |
+| *Content* |  *Presentation* | *Dynamic Effects* |
+| Nouns | Adjectives | Verbs |
 
 ```html
 <p>Hey</p>  <!-- HTML: Adds a paragraph -->
@@ -121,17 +123,17 @@ Please install [Visual Studio Code](https://code.visualstudio.com/) for the next
 
 ### Names of Special Characters
 
-|                                      |                                                               |
-| ------------------------------------ | ------------------------------------------------------------- |
-| `(` Parentheses `)`                  | `<` Angle brackets `>`                                        |
-| `{` Braces, or curly braces `}`      | `&` Ampersand `&`                                             |
+|||
+| --- | --- |
+| `(` Parentheses `)` | `<` Angle brackets `>` |
+| `{` Braces, or curly braces `}` | `&` Ampersand `&` |
 | `[` Brackets, or square brackets `]` | <code>&#124;</code> Vertical bar, or pipe <code>&#124;</code> |
-| `;` Semicolon `;`                    | `:` Colon `:`                                                 |
-| `'` Single quote `'`                 | `#` Hash or number sign `#`                                   |
-| `"` Double quote `"`                 | `` ` `` Back tick `` ` ``                                     |
-| `_` Underscore `_`                   | `*` Asterisk `*`                                              |
-| `/` Slash, or Forward slash `/`      | `~` Tilde `~`                                                 |
-| `\` Backslash `\`                    | `^` Caret or circumflex `^`                                   |
+| `;` Semicolon `;` | `:` Colon `:`  |
+| `'` Single quote `'`| `#` Hash or number sign `#` |
+| `"` Double quote `"` | `` ` `` Back tick `` ` `` |
+| `_` Underscore `_` | `*` Asterisk `*` |
+| `/` Slash, or Forward slash `/` | `~` Tilde `~` |
+| `\` Backslash `\` | `^` Caret or circumflex `^` |
 
 ---
 

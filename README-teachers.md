@@ -10,6 +10,7 @@
 * If you have nodejs installed, run `node utils/newLesson.js`.
 * Upload the lesson as GitHub pull request
   * Note: It's perfectly ok to not be an expert in git / GitHub. You can also send your lesson to another teacher for uploading. Also check the "GitHub cheat sheet" below.
+* You can find the lessons from the last semester under `last-semester-lessons/` for inspiration.
 
 # How to test your lesson on your computer
 
@@ -60,7 +61,7 @@ The easiest way to interact with GitHub is via their CLI at https://cli.github.c
 1. Download the source code. This step you need to do only once:
 
 ```sh
-gh repo clone ReDI-School/js-berlin-2023-fall
+gh repo clone ReDI-School/js-berlin-2024-spring
 ```
 
 1. Make sure you have the latest version:
