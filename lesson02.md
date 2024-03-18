@@ -283,6 +283,14 @@ We write:
 
 ---
 
+### Semicolon in JavaScript
+
+Adding semicolon after statements in JavaScript is optional.
+
+It's often considered good practice and can prevent tricky unexpected behavior, thus, all code in this course uses semicolons.
+
+---
+
 ### Variables are variable
 
 You can change the value of a variable using the assignment operator (`=`):

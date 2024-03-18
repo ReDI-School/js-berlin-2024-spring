@@ -1,6 +1,7 @@
 ### Table Of Contents
 
 1. [Basic Data Types and Operators](#basic-data-types)
+1. [Variables](#variables)
 
 
 Direct link to lessons: [1](#lesson1) [2](#lesson2)
