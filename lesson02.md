@@ -415,3 +415,40 @@ Create a new variable that contains how much we have to pay in total.
 
 Harald and Abdo volunteered to pay for the tickets. Use JavaScript to compute how much each has to pay.
 <!-- .element: class="fragment" -->
+
+---
+
+### Bonus
+
+1. The cinema gives a discount of 10%! Create a new variable that contains the discounted price.
+1. Harald and Abdo have 40 EUR total. Create a new variable that is `true` if 40 EUR is enough to pay for the discounted tickets, `false` otherwise
+
+---
+
+### Bonus
+
+You work as junior engineer at a coffee shop. The following two variables are given:
+
+```js
+let withMilk = true; // or false
+let withSugar = true; // or false
+```
+
+They can both either be true or false. Create a new variable that is `true` if someone ordered their coffee plain (without milk and without sugar), and `false` otherwise.
+
+Use JavaScript to compute whether the coffee is plain. The code should work for any combination of `withMilk` and `withSugar`.
+
+---
+
+### Solution for bonus
+
+```js
+let totalPrice = 50; // from the task above
+let discountedPrice = totalPrice * 0.9;
+let budget = 40;
+let canPay = discountedPrice >= budget;
+
+let withMilk = false;
+let withSugar = true;
+let isPlain = !withMilk && !withSugar;
+```
