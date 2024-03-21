@@ -431,5 +431,5 @@ Harald and Abdo volunteered to pay for the tickets. Use JavaScript to compute ho
 let totalPrice = 50; // from the task above
 let discountedPrice = totalPrice * 0.9;
 let budget = 40;
-let canPay = discountedPrice >= budget;
+let canPay = budget >= discountedPrice;
 ```
