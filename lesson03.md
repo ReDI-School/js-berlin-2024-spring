@@ -359,7 +359,7 @@ let x = 4 + 6 < 3 + 8;
 
 ```js
 let sum1 = 4 + 6;
-let sum2 = 3 + 6;
+let sum2 = 3 + 8;
 let x = sum1 < sum2;
 ```
 
