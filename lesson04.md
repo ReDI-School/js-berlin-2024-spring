@@ -6,7 +6,6 @@ Lesson 4, Tuesday, 2024-03-26
 
 ---
 
-
 ### Recap
 
 Name the operators:
@@ -49,8 +48,8 @@ Name the operators:
 
 ---
 
-
 <!-- .slide: id="if" -->
+
 # Conditional Statements
 
 ---
@@ -85,16 +84,16 @@ if (condition) {
 }
 ```
 
-* `condition` must be a boolean
-* The code in the block is executed only if the boolean is `true`
-* If the boolean is `false`, the code block is _not_ executed
+- `condition` must be a boolean
+- The code in the block is executed only if the boolean is `true`
+- If the boolean is `false`, the code block is _not_ executed
 
 ---
 
 ### if Statements - Examples
 
 ```js
-if (food === 'pizza') {
+if (food === "pizza") {
   document.body.textContent = "My favorite food is pizza!";
 }
 ```
@@ -106,7 +105,8 @@ if (temperature > 20) {
 ```
 
 ```js
-if (canSpeakFrench) { // same as: canSpeakFrench === true
+if (canSpeakFrench) {
+  // same as: canSpeakFrench === true
   document.body.textContent = "Bonjour!";
 }
 ```
@@ -128,6 +128,7 @@ if (language === "French") {
 ```
 
 `"Guten Tag"`
+
 <!-- .element: class="fragment" -->
 
 ---
@@ -150,6 +151,7 @@ if (language !== "German" && language !== "French") {
 ```
 
 `"Good day"`
+
 <!-- .element: class="fragment" -->
 
 ---
@@ -210,11 +212,12 @@ What does the code below show on the HTML page?
 ```js
 let food = "broccoli";
 if (food === "pizza") {
-    document.body.textContent = "yum yum";
+  document.body.textContent = "yum yum";
 }
 ```
 
 Solution: Nothing, since the condition in the `if` is `false`
+
 <!-- .element: class="fragment" -->
 
 ---
@@ -226,14 +229,15 @@ What does it output?
 ```js
 let age = 42;
 if (age >= 18) {
-    document.body.textContent = "you are allowed to drive a car";
+  document.body.textContent = "you are allowed to drive a car";
 }
 if (age < 18) {
-    document.body.textContent = "you are not allowed to drive a car";
+  document.body.textContent = "you are not allowed to drive a car";
 }
 ```
 
 Solution: First condition is `true`, so it outputs "you are allowed to drive a car"
+
 <!-- .element: class="fragment" -->
 
 ---
@@ -243,7 +247,6 @@ Solution: First condition is `true`, so it outputs "you are allowed to drive a c
 Define a variable `hour` and set it to `17`. Make an `if` statement that outputs `good day` to the body of your page, if `hour` is less than 18.
 
 Now change `hour` to `19` and run the code again. What changed?
-
 
 ---
 
@@ -255,123 +258,4 @@ Harald invented a game where the player with the highest score wins. The score i
 1. Calculate the scores for you and your neighbor
 1. Decide who wins, output the winner and their score to the `body` of your HTML. Remember: there can be a draw (both players with the same score).
 
-
-
 ---
-
-### console.log()
-
-We need a way of printing information to the console when our code runs, for debugging purposes:
-
-```js
-let name = "Owen";
-console.log(name);
-let shouldSayHello = true;
-if (shouldSayHello) {
-    console.log("Hello");
-}
-```
-
----
-
-### If-Else
-
-Very often, we would like to conditionally execute something, and otherwise execute something else:
-
-```js
-if (budget >= 60) {
-    console.log("Let's go to cinema!");
-}
-if (budget < 60) {
-    console.log("Let's go to the park!");
-}
-```
-
----
-
-### If-Else
-
-```js
-if (condition) {
-  // some code
-  // will execute if condition is true
-} else {
-  // other code
-  // will execute if condition is false
-}
-```
-
----
-
-### If-Else
-
-```js
-if (budget >= 60) {
-    console.log("Let's go to cinema!");
-} else {
-    console.log("Let's go to the park!");
-}
-```
-
----
-
-### Quiz
-
-Can you change the following code to `if..else`?
-
-```js
-if (temperature > 25) {
-  console.log("Go swimming");
-}
-if (temperature <= 25) {
-  console.log("Go biking");
-}
-```
-
----
-
-### Solution
-
-```js
-if (temperature > 25) {
-  console.log("Go swimming");
-} else {
-  console.log("Go biking");
-}
-```
-
----
-
-But what if we want to check multiple exclusive conditions?
-
----
-
-### If...Else-If...Else example
-
-```js
-if (day === 'Saturday') {
-  console.log('Do all the shopping.');
-} else if (day === 'Sunday') {
-  console.log('Relax!');
-} else {
-  console.log('Wake up and go to work!');
-}
-```
-
-Only one code block is executed in the `if..else if..else`. To determine which block, JavaScript will evaluate the conditions from top to bottom. The first condition that evaluates to true determines the block to be executed. All the other code blocks are ignored.
-
----
-
-You can use [code-to-graph](https://crubier.github.io/code-to-graph/?code=aWYgKGRheSA9PT0gJ1NhdHVyZGF5JykgewogIGNvbnNvbGUubG9nKCdEbyBhbGwgdGhlIHNob3BwaW5nLicpOwp9IGVsc2UgaWYgKGRheSA9PT0gJ1N1bmRheScpIHsKICBjb25zb2xlLmxvZygnUmVsYXghJyk7Cn0gZWxzZSB7CiAgY29uc29sZS5sb2coJ1dha2UgdXAgYW5kIGdvIHRvIHdvcmshJyk7Cn0) for visualization:
-
-![if-else](images/if-else.svg)<!-- .element height="500px" width="100%" style="background-color: #999999" -->
-
----
-
-### Task
-
-* Describe the weather based on the temperature:
-  * Above 30
-  * Above 20
-  * Above 5
-  * Everything else
