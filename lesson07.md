@@ -152,6 +152,10 @@ Write to console how many times you won, lost, and tied.
 
 ---
 
+Download or copy paste the [functions exercise](https://raw.githubusercontent.com/ReDI-School/js-berlin-2024-spring/main/functions/index.html). Open it in your browser and VSCode, then implement the three functions in the first script tag until the unit test passes.
+
+---
+
 ### Solution Task 1
 
 HTML:
