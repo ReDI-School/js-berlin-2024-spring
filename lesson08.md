@@ -203,6 +203,27 @@ if (car.modelYear > 2000) {
 
 ---
 
+### Quiz: accessing properties
+
+```js
+let car = {
+    make: 'Volkswagen',
+    model: 'Golf',
+    modelYear: 2005,
+};
+console.log('The car has ' + car.wheels + ' wheels');
+```
+
+* What's the result?
+
+```js
+console.log('The car has undefined wheels');
+```
+<!-- .element: class="fragment" -->
+
+
+---
+
 ### Task: part 1
 
 Start with the `me` object you created in the earlier task that contains your name and favorite food.
