@@ -32,6 +32,16 @@ let empty = null;
 
 ---
 
+### Refresher: Functions
+
+```js
+function sayHi() {
+    console.log("Hello World!");
+}
+```
+
+---
+
 ### Problem with simple values
 
 Let's imagine you need to describe three friends:
