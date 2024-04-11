@@ -10,6 +10,24 @@ Lesson 8, Thursday, 2024-04-11
 
 ---
 
+### Quiz
+
+What will this output?
+
+```js
+let first = true;
+let second = false;
+
+console.log(first && second);
+console.log(!first);
+```
+
+Answer: false, false
+
+<!-- .element: class="fragment" -->
+
+---
+
 ### Refresher: Data Types
 
 ```js
