@@ -87,8 +87,8 @@ Basic example of an object
 
 ```js
 let person = {
-  firstName: 'Owen',
-  age: 30,
+  firstName: 'Olof',
+  age: 32,
   isProgrammer: true 
 };
 ```
@@ -101,8 +101,8 @@ key/value pairs are also referred to as **properties**
 
 ```js
 let person = {
-  firstName: 'Owen', // comma 
-  age: 30,           // comma 
+  firstName: 'Olof', // comma 
+  age: 32,           // comma 
   isProgrammer: true // comma is optional
 };
 ```
