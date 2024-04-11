@@ -6,289 +6,343 @@ Lesson 8, Thursday, 2024-04-11
 
 ---
 
-### Arrays
+# Objects
 
-An `array` is a container type that holds multiple values:
+---
+
+### Refresher: Data Types
 
 ```js
-// we create an empty array using []
-let emptyArray = [];
+// string
+let name = "Hasan";
 
-// we put the values we want in square brackets
-// separated by commas
-let ages = [19, 33, 25, 40];
-let cities = ['London', 'Paris', 'Berlin'];
+// number
+let age = 24;
+
+// boolean
+let isProgrammer = true;
+
+// undefined
+let doNotKnow;
+
+// null
+let empty = null;
+
 ```
 
 ---
 
-Array can hold any type of value:
+### Problem with simple values
+
+Let's imagine you need to describe three friends:
 
 ```js
-let prices = [0.99, 1.49];
+let friend1Name = "Alice";
+let friend1Age = 30;
+let friend2Name = "Bob";
+let friend2Age = 35;
+let friend3Name = "Carol";
+let friend3Age = 42;
 ```
 
-And any quantity:
+We need _a lot_ of variables.
+
+---
+
+### Problem with function parameters
+
+Now imagine a function that operates on 2 people:
 
 ```js
-// I only have one favorite food
-let favoriteFoods = ['Pizza'];
-// An array holding 26 letters of the alphabet
-let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p']; //TODO
+function introduce(person1Name, person1Age, person2Name, person2Age) {
+  console.log("Hello, I am " + person1Name + ", I am " + person1Age + " years old.");
+  console.log("Hello" + person1Name + ", my name is " + person2Name + ", I am " + person2Age + " years old.");
+}
+```
+
+The parameter list gets rather long, and if you'd like to introduce another variable, it gets messy.
+
+---
+
+Wouldn't it be nicer if we could group information that belongs together somehow?
+
+---
+
+### Objects
+
+An **object**, in Javascript, is a group of *key* / *value* pairs
+
+We can think of key/value pairs as words in a dictionary
+
+* a word is the **key**
+* the definition is the **value**
+
+![Dictionary](images/dictionary.jpg) <!-- .element width="500" style="display: block; margin: 0 auto;" -->
+
+---
+
+### Objects
+
+Basic example of an object
+
+```js
+let person = {
+  firstName: 'Owen',
+  age: 30,
+  isProgrammer: true 
+};
 ```
 
 ---
 
-### Analogy: Bookshelf
+### Objects
 
-A bookshelf can be thought of as an array of books
-
-![a bookshelf mounted on a wall with books of different colours](images/bookshelf.jpg)
+key/value pairs are also referred to as **properties**
 
 ```js
-let books = ['Harry Potter', 'The Hobbit', 'Game of Thrones'];
+let person = {
+  firstName: 'Owen', // comma 
+  age: 30,           // comma 
+  isProgrammer: true // comma is optional
+};
+```
+* can you name all the properties in this **person** object?
+* and its keys?
+* and its values?
+
+---
+
+### Objects: examples
+
+```js
+let book = {
+  title: 'The Lord of the Rings',
+  author: 'J. R. R. Tolkien',
+  publicationYear: 1954,
+  pages: 1216
+};
 ```
 
 ---
 
-### Other analogies?
+### Objects: examples
 
-Can you think of other analogies for arrays?
+```js
+let car = {
+  make: 'Volkswagen',
+  model: 'Golf',
+  modelYear: 2005,
+};
+```
 
-- a todo list
+---
+
+### Task: Introduction
+
+Define a variable called `me` and initialize it with an object containing the following information about you:
+
+* name
+* favorite food
+* hair color
+* eye color
+
+---
+
+### Objects: accessing properties
+
+Now we know how to create objects, what can we do with it?
+
+```js
+let friend = {
+    name: "Alice",
+    age: 30
+};
+
+// we can access the value of a property using the "." operator
+let friendName = friend.name; // friendName points to "Alice"
+console.log(friendName + " is my friend.");
+
+// we can also change the value
+friend.age = 31;
+console.log("She is " + friend.age + " years old.")
+```
+
+---
+
+### Objects: accessing properties
+
+```js
+let book = {
+  title: 'The Lord of the Rings',
+  author: 'J. R. R. Tolkien',
+  publicationYear: 1954,
+  pages: 1216
+};
+
+console.log(book.title + " was written by " + book.author);
+```
+
+---
+
+### Objects: accessing properties
+
+```js
+let car = {
+  make: 'Volkswagen',
+  model: 'Golf',
+  modelYear: 2005,
+};
+
+if (car.modelYear > 2000) {
+  console.log('The car is relatively modern.')
+} else {
+  console.log('The car is rather old.')
+}
+
+```
+
+---
+
+### Task: part 1
+
+Start with the `me` object you created in the earlier task that contains your name and favorite food.
+
+Write a function that takes that object as a parameter and introduces that person using `console.log`.
+
+Example output:
+
+```js
+introducePerson(me);
+// "Hi, my name is Owen and my favorite food is curry"
+```
+
+---
+
+### Task: part 2
+
+Now create another object called `friend` with the same properties as `me`.
+
+Introduce your friend using the same function you created in part 1.
+
+Example output:
+
+```js
+introducePerson(friend);
+// "Hi, my name is Harald and my favorite food is pizza"
+```
+
+---
+
+### Task: part 3
+
+Create a function that takes two "person" objects. Compare their ages, then use `console.log` to print who is older of the two.
+
+You may need to first add an "age" property to your objects if you don't have it already.
+
+Example output:
+
+```js
+whoIsOlder(me, friend);
+// "Harald is older"
+```
+
+---
+
+### Object Properties
+
+So objects consist of key-value pairs (also called properties).
+
+Keys point to values.
+
+```js
+let me = {
+  firstName: 'Owen', 
+  age: 30,
+  isProgrammer: true
+};
+```
+
+So far, we've used strings, numbers, and booleans as possible values. What else could we use?
+
+---
+
+```js
+let me = {
+    firstName: "Owen",
+    address: {
+        street: "Invalidenstraße",
+        city: "Berlin"
+    }
+};
+```
+
+How many properties does the object above have? How can you access the `city` in the `me` variable above?
+
+```js
+let myCity = me.address.city;
+```
 <!-- .element: class="fragment" -->
-- a shopping list
-<!-- .element: class="fragment" -->
-- ingredients in a recipe
-<!-- .element: class="fragment" -->
-- the students in this class
-<!-- .element: class="fragment" -->
-- the numbers from 1 to 10
-<!-- .element: class="fragment" -->
-- a set of random numbers
-<!-- .element: class="fragment" -->
 
 ---
 
-### Accessing elements
-
-We can access elements in the array by number using square brackets "`[]`"
-
-The numbering starts at `0` (think floors of a building):
-
 ```js
-let books = ['Harry Potter', 'The Hobbit', 'Game of Thrones'];
-
-console.log(books[0]); // "Harry Potter"
-console.log(books[1]); // "The Hobbit"
-
-// QUIZ - how do we access "Game of Thrones" ?
+let me = {
+    name: "Harald",
+    greeting: function() {
+        if (dayOfWeek === "Monday") {
+            return "Get out of my face";
+        } else {
+            return "Hi, how are you?";
+        }
+    }
+};
 ```
 
+How would you call the greeting function?
+
 ```js
-console.log(books[2]); // "Game of Thrones"
+let greeting = me.greeting();
 ```
-
-<!-- .element: class="fragment" -->
-
-The order of elements in the array matters!
-
 <!-- .element: class="fragment" -->
 
 ---
 
-### Bookshelf array
+### Methods
 
-![bookshelf](images/array_bookshelf_0.png)
-
----
-
-### Invalid elements
+A function inside an object is also called **method**:
 
 ```js
-let books = ['Harry Potter', 'The Hobbit', 'Game of Thrones'];
+// I am a function!
+function sayHi() {
+  return "Hi!";
+}
 
-console.log(books[0]); // "Harry Potter"
-console.log(books[1]); // "The Hobbit"
-console.log(books[2]); // "Game of Thrones"
-console.log(books[3]); // ???
+let me = {
+    // I'm a method!
+    sayHi: function() {
+      return "Hi!";
+    }
+};
 ```
+
+---
+
+### What is console.log?
+
+You've been using objects and methods this whole time!
+
+`console` is a "global" object, and `log` is a method belonging to `console`.
+
+
+---
+
+### Practice
+
+Using your "me" object, create a method to introduce yourself (using console.log). Create a object within that represents your address.
 
 ```js
-console.log(books[3]); // undefined
-```
-
-<!-- .element: class="fragment" -->
-
----
-
-### Quiz
-
-```js
-let friends = ['Alice', 'Bob', 'Carol'];
-
-console.log(friends[1]); // ???
-console.log(friends[3]); // ???
-```
-
-```js
-console.log(friends[1]); // "Bob"
-console.log(friends[3]); // undefined
-```
-
-<!-- .element: class="fragment" -->
-
----
-
-### Task 1
-
-- Step 1: Create an array with your 3 top friends
-- Step 2: Say "hello" on console to each friend, e.g.:
-
-```plaintext
-hello Alice
-hello Bob
-hello Carol
-```
-
----
-
-### Task 1: solution
-
-```js
-let friends = ['Sevtap', 'Carlo', 'Abdullah'];
-console.log('hello ' + friends[0]);
-console.log('hello ' + friends[1]);
-console.log('hello ' + friends[2]);
-```
-
----
-
-### Modifying arrays
-
-We can change any value using brackets:
-
-```js
-let friends = ['Alice', 'Bob', 'Carol'];
-
-friends[1] = 'David';
-// friends array is now ["Alice", "David", "Carol"]
-
-console.log(friends[1]); // "David"
-```
-
----
-
-### Common operations: array length
-
-We can get the length of an array with the `.length` property:
-
-```js
-let friends = ['Alice', 'Bob', 'Carol'];
-console.log(friends.length); // 3
-```
-
----
-
-### Appending new values
-
-We can append new values to an array using `.push()`:
-
-```js
-let friends = ['Alice', 'Bob', 'Carol'];
-console.log(friends.length); // 3
-
-friends.push('David');
-
-console.log(friends.length); // 4
-console.log(friends[3]); // David
-```
-
----
-
-### remove a value
-
-We can remove the last element from an array `.pop()`:
-
-```js
-let fruits = ['Banana', 'Apple', 'Orange', 'Grape'];
-console.log(fruits.length); // 4
-
-fruits.pop();
-
-console.log(fruits.length); // 3
-console.log(fruits[4]); // undefined
-```
-
-`.pop()` also returns the removed element
-
----
-
-### Task 1
-
-Create an array of friends (any number more than 3).
-
-You and your friends want to go to a show (each ticket cost 7 euros).
-It is the birthday of the last friend, so you want to gift them.
-
-It will go like this:
-
-- The first friend will pay half of the total price.
-- The remaining will pay the other half.
-- The last person pays nothing.
-
-Print the results in the console.
-
----
-
-Example: my friends are Harald, Sevtap, Akram and Abdo. The output should be:
-
-```
-"Harald pays 14"
-"The others pay 7 each"
-"Congratulations Abdo! You pay nothing"
-```
-
----
-
-### Task 1 - Solution
-
-```js
-let friends = ['Harald', 'Sevtap', 'Akram', 'Abdo', 'Mell'];
-let total = friends.length * 7;
-let half = total / 2;
-// the remainder number of friends is always the total minus 2 (the first and last friend)
-let halfDividedByRest = half / (friends.length - 2); 
-
-console.log(friends[0] + ' pays ' + half);
-console.log('The others pay ' + halfDividedByRest + ' each');
-console.log(
-  'Congratulations ' + friends[friends.length - 1] + '! You pay nothing'
-);
-```
-
----
-
-### Task 2
-
-Let's say your last friend had a fight with you and now you want to update your array and **change their name to a
-generic "Karen"**.
-Using your previously created array, update it with the new friend.
-
-Then, you met a new friend and want to **add** them to your list. Update your array and log:
-
-`Welcome, <person name> to our group of friends!`
-
----
-
-### Task 2 - Solution
-
-```js
-friends[friends.length - 1] = 'Karen'; // update last item to be "Karen"
-console.log('New friends: ' + friends);
-
-friends.push('Obama'); // add a new item to the end of the array. Our friend is called "Obama"
-console.log(
-  'Welcome, ' + friends[friends.length - 1] + ' to our group of friends!'
-);
+me.introduce();
+// "Hi, my name is Owen"
+console.log(me.address.city); // "Berlin"
+console.log(me.address.country); // "Germany"
 ```

@@ -4,7 +4,7 @@
 1. [Variables](#variables)
 2. [Conditionals](#if)
 3. [Functions](#functions)
-4. [Arrays](#arrays)
+4. [Objects](#objects)
 
 
 Direct link to lessons: [1](#lesson1) [2](#lesson2) [3](#lesson3) [4](#lesson4) [5](#lesson5) [6](#lesson6) [7](#lesson7) [8](#lesson8)
