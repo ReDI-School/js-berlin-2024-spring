@@ -395,3 +395,13 @@ me.introduce();
 console.log(me.address.city); // "Berlin"
 console.log(me.address.country); // "Germany"
 ```
+
+---
+
+### Bonus Practice
+
+Change the `me` objects in https://raw.githubusercontent.com/ReDI-School/js-berlin-2024-spring/main/objects/index.html
+
+Only change `me` object, nothing else in that file!
+
+
