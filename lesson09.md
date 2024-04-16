@@ -32,9 +32,38 @@ Hasan
 ```
 <!-- .element: class="fragment" -->
 
+
 ---
 
-### Recap: Exercise
+### "this" in JavaScript
+
+In JavaScript, `this`  is a special keyword that refers to the object that the current function is a method of.
+
+---
+
+### Example
+
+```js
+let person = {
+    name: "Hasan",
+    greet: function() {
+        console.log("Hello, my name is " + this.name);
+    }
+};
+
+person.greet();
+```
+
+* What's the result?
+
+```js
+Hello, my name is Hasan
+```
+<!-- .element: class="fragment" -->
+
+---
+
+### Exercise
 
 Using your "me" object, create a method to introduce yourself (using console.log). Create a object within that represents your address.
 
@@ -68,34 +97,6 @@ console.log(me.address.country);
 
 ---
 
-### "this" in JavaScript
-
-In JavaScript, ```this```  is a special keyword that refers to the object that the current function is a method of.
-
----
-
-### Example
-
-```js
-let person = {
-    name: "Hasan",
-    greet: function() {
-        console.log("Hello, my name is " + this.name);
-    }
-};
-
-person.greet();
-```
-
-* What's the result?
-
-```js
-Hello, my name is Hasan
-```
-<!-- .element: class="fragment" -->
-
----
-
 ### Exercise
 
 Create an object car with properties ```company``` and ```model```. Add a method ```describe``` that prints out something like the following:
@@ -121,113 +122,6 @@ HTML (Structure): HTML provides the basic structure of a webpage. It defines ele
 <body>
 </html>
 ```
----
-
-### HTML and Javascript
-
-Javascript (Interactions): Javascript enables interactivity on a webpage. It allows you to respond to events like clicks, input, and more. JavaScript can change the content, style, and behavior of the webpage dynamically.
-
-```js
-function changeText() {
-  document.getElementById("greeting").textContent = "Hi!";
-}
-```
-
----
-
-### Example
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Simple Page</title>
-</head>
-<body>
-    <h1 id="greeting">Hello, World!</h1>
-    <button onclick="changeText()">Click Me</button>
-
-    <script>
-        function changeText() {
-            document.getElementById("greeting").textContent = "Hi, there!";
-        }
-    </script>
-</body>
-</html>
-
-```
-
----
-
-### Onclick Event
-
-The ```onclick``` event is a specific type that happens when a user clicks on an element, like a button, link, or image.
-
----
-
-### Example
-
-```html
-<button onclick="sayHello()">Click Me</button>
-```
-
-In this example, When a user clicks the button, it triggers the sayHello function
-
-```js
-function sayHello() {
-    alert('Hello, World!');
-}
-```
-
-
----
-
-### Changing the background color
-
-The browser provides a variable `document.body.style.backgroundColor`.
-
-We can assign a value to `document.body.style.backgroundColor` to change the background color of our HTML page.
-
-```js
-// change the current color:
-document.body.style.backgroundColor = "red";
-// print the current color to console
-console.log("The current color:", document.body.style.backgroundColor);
-```
-
----
-
-### Task
-
-Create a webpage with three buttons, "red", "green", "blue".
-
-When you press the button, set `document.body.style.backgroundColor` to that color.
-
-BONUS:
-
-* If you press the button again, change the color back to white.
-* Solve the task with only one single `function` and one single `if/else` statement.
-
----
-
-### Solution
-
-HTML:
-```html
-<button onclick="changeColor('red')">red</button>
-```
-
-JS:
-```js
-function changeColor(color) {
-    if (document.body.style.backgroundColor === color) {
-        document.body.style.backgroundColor = "white";
-    } else {
-        document.body.style.backgroundColor = color;
-    }
-}
-```
-
 ---
 
 ### Manipulate HTML Elements from JavaScript
@@ -284,6 +178,50 @@ let priceDiv = document.getElementById("totalPrice");
 // priceDiv.hidden = true;
 // priceDiv.style.backgroundColor = "red";
 // priceDiv.remove();
+```
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Page</title>
+</head>
+<body>
+    <h1 id="greeting">Hello, World!</h1>
+    <button onclick="changeText()">Click Me</button>
+
+    <script>
+        function changeText() {
+            document.getElementById("greeting").textContent = "Hi, there!";
+        }
+    </script>
+</body>
+</html>
+
+```
+
+---
+
+### Onclick Event
+
+The ```onclick``` event is a specific type that happens when a user clicks on an element, like a button, link, or image.
+
+---
+
+### Example
+
+```html
+<button onclick="sayHello()">Click Me</button>
+```
+
+In this example, When a user clicks the button, it triggers the sayHello function
+
+```js
+function sayHello() {
+    console.log('Hello, World!');
+}
 ```
 
 ---
