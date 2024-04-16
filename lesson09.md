@@ -97,6 +97,51 @@ console.log(me.address.country);
 
 ---
 
+### Recap: onclick Event
+
+The `onclick` event is a specific type that happens when a user clicks on an element, like a button, link, or image.
+
+---
+
+### Example
+
+```html
+<button onclick="sayHello()">Click Me</button>
+```
+
+In this example, When a user clicks the button, it triggers the sayHello function
+
+```js
+function sayHello() {
+  console.log('Hello, World!');
+}
+```
+
+---
+
+### oninput
+
+There are many more events similar to `onclick`:
+
+[MDN documentation](https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events)
+
+We can use the `oninput` event to run a function every time the user inputs something in an input field.
+
+---
+
+### Example
+
+```html
+<input type="number" oninput="inputChanged()">
+<script>
+  function inputChanged() {
+    console.log("yay, something changed");
+  }
+</script>
+```
+
+---
+
 ### HTML and Javascript
 
 HTML (Structure): HTML provides the basic structure of a webpage. It defines elements like headings, paragraphs, images, and more. It's like the skeleton of a webpage.
@@ -112,6 +157,7 @@ HTML (Structure): HTML provides the basic structure of a webpage. It defines ele
 <body>
 </html>
 ```
+
 ---
 
 ### Manipulate HTML Elements from JavaScript
