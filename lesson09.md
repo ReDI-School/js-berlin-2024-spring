@@ -97,16 +97,6 @@ console.log(me.address.country);
 
 ---
 
-### Exercise
-
-Create an object car with properties ```company``` and ```model```. Add a method ```describe``` that prints out something like the following:
-
-```js
-"I drive a {company} {model}"
-```
-
----
-
 ### HTML and Javascript
 
 HTML (Structure): HTML provides the basic structure of a webpage. It defines elements like headings, paragraphs, images, and more. It's like the skeleton of a webpage.
@@ -180,48 +170,26 @@ let priceDiv = document.getElementById("totalPrice");
 // priceDiv.remove();
 ```
 
+---
+
 ### Example
 
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Simple Page</title>
-</head>
 <body>
-    <h1 id="greeting">Hello, World!</h1>
-    <button onclick="changeText()">Click Me</button>
+  <h1 id="greeting">Hello, World!</h1>
+  <button onclick="changeText()">Click Me</button>
 
-    <script>
-        function changeText() {
-            document.getElementById("greeting").textContent = "Hi, there!";
-        }
-    </script>
+  <script>
+    function changeText() {
+      let element = document.getElementById("greeting");
+      element.textContent = "Hi, there!";
+    }
+  </script>
 </body>
 </html>
 
-```
-
----
-
-### Onclick Event
-
-The ```onclick``` event is a specific type that happens when a user clicks on an element, like a button, link, or image.
-
----
-
-### Example
-
-```html
-<button onclick="sayHello()">Click Me</button>
-```
-
-In this example, When a user clicks the button, it triggers the sayHello function
-
-```js
-function sayHello() {
-    console.log('Hello, World!');
-}
 ```
 
 ---
@@ -246,12 +214,12 @@ Example: "You clicked 12 times"
 
 ### Task 3
 
-We're creating a web shop selling hummus (or chocolate, or eba and egusi soup)!
+We're creating a web shop selling pizza (or lasagne, or domoda)!
 
-Create a number input field in HTML that lets the user choose the amount of hummus:
+Create a number input field in HTML that lets the user choose the amount of pizza:
 
 ```html
-Choose the amount of hummus servings:
+Choose the amount of pizza slices:
 <input type="number" id="amount" min="0" value="0" oninput="amountChanged()">
 ```
 
@@ -261,7 +229,7 @@ Use the `valueAsNumber` property of the number input to get the amount that the 
 
 ### Task 4 (Bonus)
 
-Extend your webshop to sell two products (e.g. hummus _and_ chocolate).
+Extend your webshop to sell two products (e.g. pizza _and_ lasagne).
 
 Every product has a different price. Update the total price in the `div` element every time the user changes the amount of hummus and chocolate.
 
@@ -281,10 +249,10 @@ HTML:
 <button onclick="changeColor()">Click me!</button>
 <div id="myDiv">Hello</div>
 <script>
-    function changeColor() {
-        let myDiv = document.getElementById("myDiv");
-        myDiv.style.backgroundColor = "red";
-    }
+  function changeColor() {
+    let myDiv = document.getElementById("myDiv");
+    myDiv.style.backgroundColor = "red";
+  }
 </script>
 ```
 
@@ -296,12 +264,12 @@ HTML:
 <button onclick="count()">Click me!</button>
 <div id="myDiv">You clicked 0 times</div>
 <script>
-    let clickCount = 0;
-    function count() {
-        clickCount += 1;
-        let myDiv = document.getElementById("myDiv");
-        myDiv.textContent = "You clicked " + clickCount + " times";
-    }
+  let clickCount = 0;
+  function count() {
+    clickCount += 1;
+    let myDiv = document.getElementById("myDiv");
+    myDiv.textContent = "You clicked " + clickCount + " times";
+  }
 </script>
 ```
 
@@ -313,13 +281,13 @@ HTML:
 <input type="number" id="amount" min="0" value="0" oninput="amountChanged()">
 <div id="priceDiv">0 EUR</div>
 <script>
-    let hummusPrice = 5;
-    function amountChanged() {
-        let amountElement = document.getElementById("amount");
-        let priceDiv = document.getElementById("priceDiv");
-        let amount = amountElement.valueAsNumber;
-        let totalPrice = hummusPrice * amount;
-        priceDiv.textContent = totalPrice + " EUR"
-    }
+  let hummusPrice = 5;
+  function amountChanged() {
+    let amountElement = document.getElementById("amount");
+    let priceDiv = document.getElementById("priceDiv");
+    let amount = amountElement.valueAsNumber;
+    let totalPrice = hummusPrice * amount;
+    priceDiv.textContent = totalPrice + " EUR"
+  }
 </script>
 ```
