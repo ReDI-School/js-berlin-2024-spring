@@ -106,7 +106,7 @@ The `onclick` event is a specific type that happens when a user clicks on an ele
 ### Example
 
 ```html
-<button onclick="sayHello()">Click Me</button>
+<button onclick="sayHello();">Click Me</button>
 ```
 
 In this example, When a user clicks the button, it triggers the sayHello function
@@ -132,7 +132,7 @@ We can use the `oninput` event to run a function every time the user inputs some
 ### Example
 
 ```html
-<input type="number" oninput="inputChanged()">
+<input type="number" oninput="inputChanged();">
 <script>
   function inputChanged() {
     console.log("yay, something changed");
@@ -225,12 +225,12 @@ let priceDiv = document.getElementById("totalPrice");
 <html>
 <body>
   <h1 id="greeting">Hello, World!</h1>
-  <button onclick="changeText()">Click Me</button>
+  <button onclick="changeText();">Click Me</button>
 
   <script>
     function changeText() {
-      let element = document.getElementById("greeting");
-      element.textContent = "Hi, there!";
+      let greetingElement = document.getElementById("greeting");
+      greetingElement.textContent = "Hi, there!";
     }
   </script>
 </body>
@@ -266,7 +266,7 @@ Create a number input field in HTML that lets the user choose the amount of pizz
 
 ```html
 Choose the amount of pizza slices:
-<input type="number" id="amount" min="0" value="0" oninput="amountChanged()">
+<input type="number" id="amount" min="0" value="0" oninput="amountChanged();">
 ```
 
 Use the `valueAsNumber` property of the number input to get the amount that the user selected in your `amountChanged` function. Output the total price the user has to pay to a `div` element.
@@ -324,7 +324,7 @@ HTML:
 ### Solution Task 3
 
 ```html
-<input type="number" id="amount" min="0" value="0" oninput="amountChanged()">
+<input type="number" id="amount" min="0" value="0" oninput="amountChanged();">
 <div id="priceDiv">0 EUR</div>
 <script>
   let hummusPrice = 5;
