@@ -26,7 +26,7 @@ console.log(me.name)
 * What's the result?
 
 ```js
-Ownen
+Owen
 Berlin
 Hasan
 ```
