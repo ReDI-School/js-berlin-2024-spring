@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Number Guessing</title>
 </head>
 <body>
 <h1>Guess the magic number!</h1>
 
 <input type="number" value=50 min=1 max=100 id="guessInput" autofocus=true>
 <button id="guessButton" onclick="guess()">Guess</button>
-<div id="result">Guess the magic number!</div>
-<div id="history">Previous guesses: </div>
+<div id="resultDiv">Guess the magic number!</div>
+<div id="historyDiv">Previous guesses: </div>
 
 <script>
     // first, get variables pointing to all relevant elements
     let guessInput = document.getElementById("guessInput");
     let guessButton = document.getElementById("guessButton");
-    let resultDiv = document.getElementById("result");
-    let historyDiv = document.getElementById("history");
+    let resultDiv = document.getElementById("resultDiv");
+    let historyDiv = document.getElementById("historyDiv");
 
     // let the computer choose the magic number
     let magicNumber = Math.floor(Math.random() * 100) + 1;
