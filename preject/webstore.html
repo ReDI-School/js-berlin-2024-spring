@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webstore</title>
+</head>
+
+<body>
+    <div>
+        <label for="pizzaInput">Pizza (2.99 EUR each):</label>
+        <input id="pizzaInput" type="number" min="0" value="0"
+            oninput="updateTotal()">
+    </div>
+    <div>
+        <label for="bibimbabInput">Bibimbab (8.99 EUR each):</label>
+        <input id="bibimbabInput" type="number" min="0" value="0"
+            oninput="updateTotal()">
+    </div>
+    <div>
+        <label for="expressInput">Express shipping (2 EUR):</label>
+        <input id="expressInput" type="checkbox" onchange="updateTotal()">
+    </div>
+    <div>Total price: <span id="totalPriceSpan">0</span> EUR</div>
+
+    <script>
+        // define the prices for our products
+        let pizzaPrice = 2.99;
+        let bibimbabPrice = 8.99;
+        let expressPrice = 2;
+
+        // get variables pointing to our HTML elements
+        let pizzaInput = document.getElementById("pizzaInput");
+        let bibimbabInput = document.getElementById("bibimbabInput");
+        let expressInput = document.getElementById("expressInput");
+        let totalPriceSpen = document.getElementById("totalPriceSpan");
+
+        // this runs every time the input changes
+        function updateTotal() {
+
+            // first, get the amount the user ordered
+            let pizzaQuantity = pizzaInput.valueAsNumber;
+            let bibimbabQuantity = bibimbabInput.valueAsNumber;
+
+            // compute the total price
+            let totalPrice = 0;
+            totalPrice += pizzaQuantity * pizzaPrice;
+            totalPrice += bibimbabQuantity * bibimbabPrice;
+
+            // add the express price only if express delivery is checked
+            if (expressInput.checked) {
+                totalPrice += expressPrice;
+            }
+
+            // update our web page with the new price
+            totalPriceSpan.textContent = totalPrice.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
