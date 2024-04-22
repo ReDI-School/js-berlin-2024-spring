@@ -91,12 +91,10 @@ Provide two input fields for operands (Operand 1 and Operand 2), a dropdown menu
 
 When the user clicks the "Calculate" button, retrieve the values from the input fields and the selected operator from the dropdown menu.
 
----
-
-### Task 3 (CONTD)
-
 Using JavaScript, perform the appropriate operation (addition or subtraction) based on the selected operator.
 
 Display the result in the designated div.
+
+---
 
 ![calculator](images/calculator.png) <!-- .element height="300px" width="500px" -->
