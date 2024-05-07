@@ -302,7 +302,7 @@ After your code ran, the array should look like this:
 
 You have the following HTML in your body:
 
-```js
+```html
 <div id="colors">
   <div>red</div>
   <div>yellow</div>
