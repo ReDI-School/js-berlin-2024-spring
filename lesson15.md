@@ -262,3 +262,46 @@ async function main() {
 1. Show all the bordering countries (field: `borders`) as buttons. Example: Germany has a neighbour called `AUT`. Create a button with text content `AUT` and when the user clicks the button, the page should display information about this country (hint: use the `alpha` API, e.g: https://restcountries.com/v3.1/alpha/aut)
 
 <!-- .slide: style="font-size:80%" -->
+
+---
+
+## Already finished?
+
+### Take more practice!
+
+#### Dogs
+
+https://dog.ceo/dog-api/documentation/random
+
+> Display a random dog image
+
+https://kinduff.github.io/dog-api/
+
+> Fetch dog facts
+
+<!-- .slide: style="font-size:80%" -->
+
+---
+
+### Task
+
+Create a simple webpage, that fetches dog images from the API. Pair it with the second API and show some dog facts
+together with images.
+
+---
+
+## Holidays
+
+https://date.nager.at/Api
+
+> Query the holidays of over 100 countries
+
+---
+
+### Task
+
+Show the holidays in Germany for 2024.
+
+BONUS: Add a dropdown to select holidays for one state only.
+
+<!-- .slide: style="font-size:80%" -->
