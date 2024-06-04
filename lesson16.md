@@ -2,7 +2,7 @@
 
 # Basic Frontend - Spring 2024
 
-Lesson 16, Tuesday, 2024-05-21
+Lesson 16, Thursday, 2024-05-23
 
 ---
 
