@@ -252,9 +252,9 @@ Now change `hour` to `19` and run the code again. What changed?
 
 # Task
 
-Harald invented a game where the player with the highest score wins. The score is the player's height (in cm) plus five times the player's age.
+Harald invented a game where the player with the highest score wins. The score is the player's shoe size plus five multiplied by the number of times you ate pizza in the last month.
 
-1. Create variables for the heights and ages for you and a person next to you
+1. Create variables for the shoe size and number of pizza eaten for you and a person next to you
 1. Calculate the scores for you and your neighbor
 1. Decide who wins, output the winner and their score to the `body` of your HTML. Remember: there can be a draw (both players with the same score).
 
