@@ -68,7 +68,7 @@ console.log(me.name); // "John"
 
 Let's say we want to transfer the object `me` over the internet. We can't just send the object, because the internet only understands strings.
 
-We could send a string like "Hi my name is John Doe and I like to eat and sleep". But then how would the receiver know what is the name, what is the last name, and what are the hobbies? (No, large language models are not the answer.)
+We could send a string like "Hi my name is John Doe and I like to eat and sleep". But then how would the receiver know what is the name, what is the last name, and what are the hobbies?
 
 ---
 
@@ -126,27 +126,6 @@ OK great, but how can we access that from JavaScript?
 
 ---
 
-### The dark past: XMLHttpRequest
-
-```js
-let url = "https://something.com/";
-
-function load(url, callback) {
-  let xhr = new XMLHttpRequest();
-
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      callback(xhr.response);
-    }
-  };
-
-  xhr.open("GET", url, true);
-  xhr.send(null);
-}
-```
-
----
-
 <!-- .slide: id="fetch" -->
 
 # fetch API
@@ -155,16 +134,6 @@ function load(url, callback) {
 
 - Fetching data from the internet might take a lot of time
 - We must not block our browser while waiting for the reply!
-- One way around this is to use callbacks. The browser will call our callback function when the data is ready.
-- `XMLHttpRequest` was working with callbacks. The API is ugly, error-prone and difficult to use
-
----
-
-Can you think of something else that is not callbacks? Something that'll help us write code that is easier to read and understand? Something that'll help us avoid callback hell?
-
-No? Neither could the JavaScript community. Until 2017.
-
-<!-- .element: class="fragment" -->
 
 ---
 
